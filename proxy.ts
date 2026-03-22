@@ -1,10 +1,13 @@
-import { clerkMiddleware } from '@clerk/nextjs/server'
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default clerkMiddleware()
+export default clerkMiddleware();
 
 export const config = {
   matcher: [
-    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    '/(api|trpc)(.*)',
+    // Protect dashboard and API routes
+    "/dashboard(.*)",
+    "/api(.*)",
+    // Skip public routes
+    "/((?!_next|sign-in|sign-up|public|.*\\.png|.*\\.svg).*)",
   ],
-}
+};
