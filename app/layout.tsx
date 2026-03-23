@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClerkProvider, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
+import { shadcn } from "@clerk/ui/themes";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
 
@@ -32,7 +33,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClerkProvider signUpForceRedirectUrl="/dashboard" signInForceRedirectUrl="/dashboard" afterSignOutUrl="/">
+        <ClerkProvider appearance={{ theme: shadcn }} signUpForceRedirectUrl="/dashboard" signInForceRedirectUrl="/dashboard" afterSignOutUrl="/">
           <header className="flex items-center justify-end gap-3 border-b px-6 py-4">
             {!userId ? (
               <>
