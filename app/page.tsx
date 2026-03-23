@@ -93,7 +93,7 @@ export default async function HomePage() {
           </SignUpButton>
           <SignInButton mode="modal">
             <Button variant="outline" size="lg" className="px-8">
-              Sign In
+              Learn More
             </Button>
           </SignInButton>
         </div>
