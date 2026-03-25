@@ -1,3 +1,8 @@
+---
+description: Read this before implementing or modifying UI components in the project.
+
+---
+
 # UI Components — shadcn/ui Required
 
 **Last Updated**: March 19, 2026

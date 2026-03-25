@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying authentication in the project.
+---
+
 # Authentication: Clerk (Mandatory)
 
 **Clerk is the ONLY authentication method for this project.** No alternative auth systems (OAuth, JWT custom sessions, etc.) are permitted.
